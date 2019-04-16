@@ -4,10 +4,8 @@ package ru.mail.polis;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 
@@ -23,17 +21,17 @@ public class MyFirstDAO implements DAO {
     }
 
     @Override
-    public void upsert(@NotNull ByteBuffer key, @NotNull ByteBuffer value) throws IOException {
+    public void upsert(@NotNull ByteBuffer key, @NotNull ByteBuffer value) {
         db.put(key, Record.of(key, value));
     }
 
     @Override
-    public void remove(@NotNull ByteBuffer key) throws IOException {
+    public void remove(@NotNull ByteBuffer key) {
         db.remove(key);
     }
 
     @Override
-    public void close() throws IOException {
-
+    public void close()  {
+        //Do nothing
     }
 }
