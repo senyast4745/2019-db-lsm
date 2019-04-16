@@ -37,6 +37,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author incubos
  */
 class BasicTest extends TestBase {
+
     @Test
     void empty(@TempDir File data) throws IOException {
         final DAO dao = DAOFactory.create(data);
