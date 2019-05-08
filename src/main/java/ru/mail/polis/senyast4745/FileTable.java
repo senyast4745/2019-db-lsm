@@ -1,5 +1,7 @@
 package ru.mail.polis.senyast4745;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -10,13 +12,6 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import org.jetbrains.annotations.NotNull;
-
-import com.google.common.collect.Iterators;
-
-import ru.mail.polis.Iters;
 
 public class FileTable implements Table {
     private final int rows;
@@ -33,7 +28,7 @@ public class FileTable implements Table {
         try (FileChannel fc = FileChannel.open(file.toPath(), StandardOpenOption.READ)) {
             mapped = fc.map(FileChannel.MapMode.READ_ONLY, 0L, fileSize).order(ByteOrder.BIG_ENDIAN);
         }
-        int limit = mapped.limit();
+        final int limit = mapped.limit();
 
         // Rows
         final long rowsValue = mapped.getLong((int) (fileSize - Long.BYTES));
@@ -169,7 +164,7 @@ public class FileTable implements Table {
 
     @NotNull
     @Override
-    public Iterator<Cell> iterator(@NotNull ByteBuffer from) {
+    public Iterator<Cell> iterator(@NotNull final ByteBuffer from) {
         return new Iterator<>() {
             int next = position(from);
 

@@ -10,7 +10,7 @@ public class Cell {
     private final ByteBuffer key;
     private final Value value;
 
-    Cell(ByteBuffer key, Value value) {
+    Cell(final ByteBuffer key, final Value value) {
         this.key = key;
         this.value = value;
     }

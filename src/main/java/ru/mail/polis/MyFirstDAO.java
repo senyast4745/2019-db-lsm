@@ -18,7 +18,7 @@ public class MyFirstDAO implements DAO {
     }
 
     @Override
-    public void upsert(@NotNull final ByteBuffer key, @NotNull ByteBuffer value) {
+    public void upsert(@NotNull final ByteBuffer key, @NotNull final ByteBuffer value) {
         db.put(key, Record.of(key, value));
     }
 

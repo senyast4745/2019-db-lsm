@@ -19,6 +19,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ *
+ */
 public class LSMDao implements DAO {
     private static final String TEMP = ".tmp";
     private static final String SUFFIX = ".dat";
@@ -28,7 +31,7 @@ public class LSMDao implements DAO {
     private final long flushLimit;
     private final File base;
     private int generation;
-    private List<FileTable> fileTables;
+    private final List<FileTable> fileTables;
 
     public LSMDao(final File base, final long flushMax) throws IOException {
         this.base = base;
