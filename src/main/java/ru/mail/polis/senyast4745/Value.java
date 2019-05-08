@@ -36,7 +36,7 @@ public class Value implements Comparable<Value> {
 
     ByteBuffer getData() {
         if (data == null) {
-            throw new IllegalArgumentException("");
+            throw new IllegalArgumentException("Value data is null");
         }
         return data.asReadOnlyBuffer();
     }

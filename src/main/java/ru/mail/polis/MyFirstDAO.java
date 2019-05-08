@@ -13,17 +13,17 @@ public class MyFirstDAO implements DAO {
 
     @Override
     public @NotNull
-    Iterator<Record> iterator(@NotNull ByteBuffer from) {
+    Iterator<Record> iterator(@NotNull final ByteBuffer from) {
         return db.tailMap(from).values().iterator();
     }
 
     @Override
-    public void upsert(@NotNull ByteBuffer key, @NotNull ByteBuffer value) {
+    public void upsert(@NotNull final ByteBuffer key, @NotNull ByteBuffer value) {
         db.put(key, Record.of(key, value));
     }
 
     @Override
-    public void remove(@NotNull ByteBuffer key) {
+    public void remove(@NotNull final ByteBuffer key) {
         db.remove(key);
     }
 
