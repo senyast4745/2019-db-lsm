@@ -127,7 +127,7 @@ public class FileTable implements Table {
         final long timestamp = cells.getLong(offset);
         offset += Long.BYTES;
         if (timestamp < 0) {
-            return new Cell(key.slice(), Value.tombstone (-timestamp));
+            return new Cell( key.slice(), Value.tombstone (-timestamp));
         } else {
             final int valueSize = cells.getInt(offset);
             offset += Integer.BYTES;
@@ -187,12 +187,12 @@ public class FileTable implements Table {
 
 
     @Override
-    public void upsert(@NotNull ByteBuffer key, @NotNull ByteBuffer value) {
+    public void upsert(@NotNull final ByteBuffer key, @NotNull final ByteBuffer value) {
         throw new UnsupportedOperationException("upsert");
     }
 
     @Override
-    public void remove(@NotNull ByteBuffer key) {
+    public void remove(@NotNull final ByteBuffer key) {
         throw new UnsupportedOperationException("remove");
     }
 

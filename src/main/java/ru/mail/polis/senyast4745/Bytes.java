@@ -2,7 +2,7 @@ package ru.mail.polis.senyast4745;
 
 import java.nio.ByteBuffer;
 
-class Bytes {
+final class Bytes {
 
     private Bytes(){}
 

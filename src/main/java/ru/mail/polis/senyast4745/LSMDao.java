@@ -20,7 +20,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- *
+ * Main DAO
  */
 public class LSMDao implements DAO {
     private static final String TEMP = ".tmp";
