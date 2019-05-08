@@ -1,6 +1,5 @@
 package ru.mail.polis.senyast4745;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -54,7 +53,8 @@ public class FileTable implements Table {
     }
 
     static void write(final Iterator<Cell> cells, final File to) throws IOException {
-        try (FileChannel fChannel = FileChannel.open(to.toPath(), StandardOpenOption.CREATE_NEW, StandardOpenOption.WRITE)) {
+        try (FileChannel fChannel = FileChannel.open(to.toPath(),
+                StandardOpenOption.CREATE_NEW, StandardOpenOption.WRITE)) {
             final List<Long> offsets = new ArrayList<>();
             long offset = 0;
             while (cells.hasNext()) {
@@ -94,7 +94,7 @@ public class FileTable implements Table {
 
             }
             // Offsets
-            for (long anOffset : offsets) {
+            for (final long anOffset : offsets) {
                 fChannel.write(Bytes.fromLong(anOffset));
             }
 

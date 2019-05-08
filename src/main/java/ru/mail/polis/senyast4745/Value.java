@@ -4,12 +4,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.nio.ByteBuffer;
 
-public class Value implements Comparable<Value> {
+public final class Value implements Comparable<Value> {
     private final long ts;
     private final ByteBuffer data;
 
     private Value(final long ts, final ByteBuffer data) {
-        assert (ts >= 0);
+        assert ts >= 0;
         this.ts = ts;
         this.data = data;
     }
@@ -26,7 +26,7 @@ public class Value implements Comparable<Value> {
         return tombstone(System.currentTimeMillis());
     }
 
-    static Value tombstone(long time) {
+    static Value tombstone(final long time) {
         return new Value(time, null);
     }
 
@@ -42,7 +42,7 @@ public class Value implements Comparable<Value> {
     }
 
     @Override
-    public int compareTo(@NotNull Value o) {
+    public int compareTo(@NotNull final Value o) {
         return Long.compare(o.ts, ts);
     }
 
