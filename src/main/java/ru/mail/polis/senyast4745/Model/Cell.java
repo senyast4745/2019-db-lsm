@@ -5,7 +5,8 @@ import java.util.Comparator;
 
 public class Cell {
     public static final Comparator<Cell> COMPARATOR =
-            Comparator.comparing(Cell::getKey).thenComparing(Cell::getValue).thenComparing(Cell::getGeneration, Comparator.reverseOrder());
+            Comparator.comparing(Cell::getKey).thenComparing(Cell::getValue)
+                    .thenComparing(Cell::getGeneration, Comparator.reverseOrder());
 
     private final ByteBuffer key;
     private final Value value;
