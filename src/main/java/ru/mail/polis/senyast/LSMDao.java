@@ -1,14 +1,14 @@
-package ru.mail.polis.senyast4745;
+package ru.mail.polis.senyast;
 
 import com.google.common.collect.Iterators;
 import org.jetbrains.annotations.NotNull;
 import ru.mail.polis.DAO;
 import ru.mail.polis.Iters;
 import ru.mail.polis.Record;
-import ru.mail.polis.senyast4745.Model.Cell;
-import ru.mail.polis.senyast4745.Model.Generation;
-import ru.mail.polis.senyast4745.Tables.FileTable;
-import ru.mail.polis.senyast4745.Tables.MemTable;
+import ru.mail.polis.senyast.Model.Cell;
+import ru.mail.polis.senyast.Model.Generation;
+import ru.mail.polis.senyast.Tables.FileTable;
+import ru.mail.polis.senyast.Tables.MemTable;
 
 import java.io.File;
 import java.io.IOException;

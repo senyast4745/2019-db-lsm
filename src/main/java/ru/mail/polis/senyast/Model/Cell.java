@@ -1,4 +1,4 @@
-package ru.mail.polis.senyast4745.Model;
+package ru.mail.polis.senyast.Model;
 
 import java.nio.ByteBuffer;
 import java.util.Comparator;

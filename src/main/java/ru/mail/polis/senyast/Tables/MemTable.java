@@ -1,9 +1,9 @@
-package ru.mail.polis.senyast4745.Tables;
+package ru.mail.polis.senyast.Tables;
 
 import com.google.common.collect.Iterators;
 import org.jetbrains.annotations.NotNull;
-import ru.mail.polis.senyast4745.Model.Cell;
-import ru.mail.polis.senyast4745.Model.Value;
+import ru.mail.polis.senyast.Model.Cell;
+import ru.mail.polis.senyast.Model.Value;
 
 import java.nio.ByteBuffer;
 import java.util.Iterator;

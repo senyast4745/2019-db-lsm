@@ -1,6 +1,6 @@
-package ru.mail.polis.senyast4745.Model;
+package ru.mail.polis.senyast.Model;
 
-import ru.mail.polis.senyast4745.LSMDao;
+import ru.mail.polis.senyast.LSMDao;
 
 import java.nio.file.Path;
 import java.util.regex.Matcher;
