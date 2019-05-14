@@ -12,6 +12,12 @@ public class Cell {
     private final Value value;
     private final long  generation;
 
+    /**
+     * Creating new Cell with data
+     * @param key key in database
+     * @param value value in database
+     * @param generation the generation of Cell
+     */
     public Cell(final ByteBuffer key, final Value value, final long generation) {
         this.key = key;
         this.value = value;

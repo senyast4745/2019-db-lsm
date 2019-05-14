@@ -21,7 +21,7 @@ public final class Generation {
      * @return generation number
      */
     private static long fromFileName(final String fileName){
-        String pattern = LSMDao.PREFIX_FILE + "(\\d+)" + LSMDao.SUFFIX_DAT;
+        final String pattern = LSMDao.PREFIX_FILE + "(\\d+)" + LSMDao.SUFFIX_DAT;
         final Pattern regex = Pattern.compile(pattern);
         final Matcher matcher = regex.matcher(fileName);
         if (matcher.find()){

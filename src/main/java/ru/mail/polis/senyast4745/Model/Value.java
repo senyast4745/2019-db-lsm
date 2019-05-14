@@ -26,6 +26,12 @@ public final class Value implements Comparable<Value> {
         return new Value(null, System.currentTimeMillis(), true);
     }
 
+    /**
+     * Creating new Value with data
+     * @param data writing data to value
+     * @param timestamp time of creating
+     * @param isDead boolean flag of consistency of data
+     */
     public Value(final ByteBuffer data, final long timestamp, final boolean isDead) {
         this.data = data;
         this.timestamp = timestamp;
