@@ -5,6 +5,10 @@ import org.jetbrains.annotations.NotNull;
 import ru.mail.polis.DAO;
 import ru.mail.polis.Iters;
 import ru.mail.polis.Record;
+import ru.mail.polis.senyast4745.Model.Cell;
+import ru.mail.polis.senyast4745.Model.Generation;
+import ru.mail.polis.senyast4745.Tables.FileTable;
+import ru.mail.polis.senyast4745.Tables.MemTable;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +23,7 @@ import java.util.stream.Stream;
 
 public class LSMDao implements DAO {
     public static final String SUFFIX_DAT = ".dat";
-    public static final String SUFFIX_TMP = ".tmp";
+    private static final String SUFFIX_TMP = ".tmp";
     public static final String PREFIX_FILE = "TABLE";
 
     private final File file;
@@ -33,7 +37,7 @@ public class LSMDao implements DAO {
      * Create persistence DAO.
      *
      * @param file database location
-     * @param flushLimit when is reached -- write to disk
+     * @param flushLimit when we should write to disk
      * @throws IOException if I/O error
      */
     public LSMDao(@NotNull final File file, final long flushLimit) throws IOException {

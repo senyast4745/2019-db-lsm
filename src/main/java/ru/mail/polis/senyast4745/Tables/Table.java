@@ -1,6 +1,7 @@
-package ru.mail.polis.senyast4745;
+package ru.mail.polis.senyast4745.Tables;
 
 import org.jetbrains.annotations.NotNull;
+import ru.mail.polis.senyast4745.Model.Cell;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -9,7 +10,6 @@ import java.util.Iterator;
 public interface Table {
     long sizeInBytes();
 
-    @NotNull
     Iterator<Cell> iterator(@NotNull ByteBuffer from) throws IOException;
 
     void upsert(

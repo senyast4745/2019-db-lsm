@@ -1,32 +1,28 @@
-package ru.mail.polis.senyast4745;
+package ru.mail.polis.senyast4745.Model;
 
-import org.jetbrains.annotations.NotNull;
-import java.io.File;
+import ru.mail.polis.senyast4745.LSMDao;
+
 import java.nio.file.Path;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import java.io.File;
-
 public final class Generation {
+
     private Generation(){}
 
     public static long fromPath(final Path path){
         return fromFileName(path.getFileName().toString());
     }
 
-    public static long fromFile(final File file){
-        return fromFileName(file.getName());
-    }
-
     /**
-     * Get generation SSTable from filename.
+     * Get generation FileTable from filename.
      *
-     * @param fileName name of SSTable file
+     * @param fileName name of FileTable file
      * @return generation number
      */
-    public static long fromFileName(final String fileName){
-        final Pattern regex = Pattern.compile(LSMDao.PREFIX_FILE + "(\\d+)" + LSMDao.SUFFIX_DAT);
+    private static long fromFileName(final String fileName){
+        String pattern = LSMDao.PREFIX_FILE + "(\\d+)" + LSMDao.SUFFIX_DAT;
+        final Pattern regex = Pattern.compile(pattern);
         final Matcher matcher = regex.matcher(fileName);
         if (matcher.find()){
             return Long.parseLong(matcher.group(1));

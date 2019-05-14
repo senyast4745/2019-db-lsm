@@ -1,7 +1,9 @@
-package ru.mail.polis.senyast4745;
+package ru.mail.polis.senyast4745.Tables;
 
 import com.google.common.collect.Iterators;
 import org.jetbrains.annotations.NotNull;
+import ru.mail.polis.senyast4745.Model.Cell;
+import ru.mail.polis.senyast4745.Model.Value;
 
 import java.nio.ByteBuffer;
 import java.util.Iterator;
@@ -19,7 +21,7 @@ public class MemTable implements Table {
     }
 
     /**
-     * Get data iterator from memtable.
+     * Get data iterator from memory table.
      *
      * @param from key to find data
      * @return data iterator

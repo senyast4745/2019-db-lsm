@@ -1,6 +1,9 @@
-package ru.mail.polis.senyast4745;
+package ru.mail.polis.senyast4745.Tables;
 
 import org.jetbrains.annotations.NotNull;
+import ru.mail.polis.senyast4745.Model.Bytes;
+import ru.mail.polis.senyast4745.Model.Cell;
+import ru.mail.polis.senyast4745.Model.Value;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,11 +24,11 @@ public class FileTable implements Table {
     private final File file;
 
     /**
-     * Creates instance of SSTable and get data from file.
+     * Creates instance of FileTable and get data from file.
      *
      * @param file       to get data
      * @param generation of data
-     * @throws IOException if I/O error
+     * @throws IOException if was input or output errors
      */
     public FileTable(@NotNull final File file, final long generation) throws IOException {
         this.generation = generation;
@@ -55,8 +58,8 @@ public class FileTable implements Table {
      * Write data to disk.
      *
      * @param cells data iterator to write
-     * @param to    file location
-     * @throws IOException if I/O error
+     * @param to    ile location
+     * @throws IOException if was input or output errors
      */
     public static void writeToFile(@NotNull final Iterator<Cell> cells, @NotNull final File to)
             throws IOException {
@@ -104,7 +107,8 @@ public class FileTable implements Table {
     }
 
     @Override
-    public long sizeInBytes() {
+    public long sizeInBytes()
+    {
         return 0;
     }
 
@@ -115,7 +119,8 @@ public class FileTable implements Table {
             int next = position(from);
 
             @Override
-            public boolean hasNext() {
+            public boolean hasNext()
+            {
                 return next < rows;
             }
 

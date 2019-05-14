@@ -1,17 +1,17 @@
-package ru.mail.polis.senyast4745;
+package ru.mail.polis.senyast4745.Model;
 
 import java.nio.ByteBuffer;
 import java.util.Comparator;
 
 public class Cell {
-    static final Comparator<Cell> COMPARATOR =
+    public static final Comparator<Cell> COMPARATOR =
             Comparator.comparing(Cell::getKey).thenComparing(Cell::getValue).thenComparing(Cell::getGeneration, Comparator.reverseOrder());
 
     private final ByteBuffer key;
     private final Value value;
     private final long  generation;
 
-    Cell(final ByteBuffer key, final Value value, final long generation) {
+    public Cell(final ByteBuffer key, final Value value, final long generation) {
         this.key = key;
         this.value = value;
         this.generation = generation;
@@ -25,7 +25,7 @@ public class Cell {
         return value;
     }
 
-    public long getGeneration() {
+    private long getGeneration() {
         return generation;
     }
 }
