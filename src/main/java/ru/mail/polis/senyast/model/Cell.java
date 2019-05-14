@@ -13,7 +13,7 @@ public class Cell {
     private final long  generation;
 
     /**
-     * Creating new Cell with data
+     * Creating new Cell with data.
      *
      * @param key key in database
      * @param value value in database

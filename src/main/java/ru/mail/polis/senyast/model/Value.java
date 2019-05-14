@@ -27,7 +27,7 @@ public final class Value implements Comparable<Value> {
     }
 
     /**
-     * Creating new Value with data
+     * Creating new Value with data.
      *
      * @param data writing data to value
      * @param timestamp time of creating
