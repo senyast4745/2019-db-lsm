@@ -5,10 +5,10 @@ import org.jetbrains.annotations.NotNull;
 import ru.mail.polis.DAO;
 import ru.mail.polis.Iters;
 import ru.mail.polis.Record;
-import ru.mail.polis.senyast.Model.Cell;
-import ru.mail.polis.senyast.Model.Generation;
-import ru.mail.polis.senyast.Tables.FileTable;
-import ru.mail.polis.senyast.Tables.MemTable;
+import ru.mail.polis.senyast.model.Cell;
+import ru.mail.polis.senyast.model.Generation;
+import ru.mail.polis.senyast.tables.FileTable;
+import ru.mail.polis.senyast.tables.MemTable;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,9 +1,9 @@
-package ru.mail.polis.senyast.Tables;
+package ru.mail.polis.senyast.tables;
 
 import org.jetbrains.annotations.NotNull;
-import ru.mail.polis.senyast.Model.Bytes;
-import ru.mail.polis.senyast.Model.Cell;
-import ru.mail.polis.senyast.Model.Value;
+import ru.mail.polis.senyast.model.Bytes;
+import ru.mail.polis.senyast.model.Cell;
+import ru.mail.polis.senyast.model.Value;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package ru.mail.polis.senyast.Model;
+package ru.mail.polis.senyast.model;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -28,6 +28,7 @@ public final class Value implements Comparable<Value> {
 
     /**
      * Creating new Value with data
+     *
      * @param data writing data to value
      * @param timestamp time of creating
      * @param isDead boolean flag of consistency of data

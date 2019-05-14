@@ -1,4 +1,4 @@
-package ru.mail.polis.senyast.Model;
+package ru.mail.polis.senyast.model;
 
 import java.nio.ByteBuffer;
 

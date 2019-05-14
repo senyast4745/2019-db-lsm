@@ -1,4 +1,4 @@
-package ru.mail.polis.senyast.Model;
+package ru.mail.polis.senyast.model;
 
 import java.nio.ByteBuffer;
 import java.util.Comparator;
@@ -14,6 +14,7 @@ public class Cell {
 
     /**
      * Creating new Cell with data
+     *
      * @param key key in database
      * @param value value in database
      * @param generation the generation of Cell
